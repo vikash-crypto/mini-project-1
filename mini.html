@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Inventory Management</title>
+  <link rel="stylesheet" href="mini.css">
+</head>
+<body>
+  <header>
+    <h1>Shop Inventory Management</h1>
+  </header>
+  <main>
+    <!-- Add New Item Section -->
+    <section id="add-item">
+      <h2>Add New Item</h2>
+      <input type="text" id="item-name" placeholder="Item Name" />
+      <select id="item-category">
+        <option value="" disabled selected>Select Category</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Groceries">Groceries</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Stationery">Stationery</option>
+      </select>
+      <input type="number" id="item-quantity" placeholder="Quantity" />
+      <input type="number" id="item-price" placeholder="Price Per Unit" />
+      <button id="add-item-btn">Add Item</button>
+      <button id="clear-form-btn">Clear Form</button>
+    </section>
+
+    <!-- Inventory Section -->
+    <section id="inventory">
+      <h2>Inventory</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Price Per Unit</th>
+            <th>Total Value</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="inventory-list">
+          <!-- Items will be dynamically added here -->
+        </tbody>
+      </table>
+      <p><strong>Total Inventory Value:</strong> $<span id="inventory-total">0.00</span></p>
+    </section>
+  </main>
+  <script src="mini.js"></script>
+</body>
+</html>
